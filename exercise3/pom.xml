@@ -38,6 +38,11 @@
             <version>1.7.0</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>repository.com.googlecode.catch-exception</groupId>
+            <artifactId>catch-exception</artifactId>
+            <version>1.2.0</version>
+        </dependency>
         
         <dependency>
             <groupId>org.springframework</groupId>
