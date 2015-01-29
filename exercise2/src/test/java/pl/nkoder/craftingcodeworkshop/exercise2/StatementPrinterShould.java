@@ -89,7 +89,7 @@ public class StatementPrinterShould {
     private Transactions transactions(Transaction... transactionsAsList) {
         ArrayList<Transaction> asList = newArrayList(transactionsAsList);
         Transactions transactions = mock(Transactions.class);
-        when(transactions.asListOrderedChronologically()).thenReturn(asList);
+        when(transactions.orderedFromNewestToOldest()).thenReturn(asList);
         return transactions;
     }
 

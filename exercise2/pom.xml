@@ -82,6 +82,11 @@
                 <version>1.0.4</version>
                 <scope>test</scope>
             </dependency>
+            <dependency>
+                <groupId>repository.org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>3.3.2</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -105,6 +110,10 @@
         <dependency>
             <groupId>pl.pragmatists</groupId>
             <artifactId>JUnitParams</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>repository.org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
         </dependency>
     </dependencies>
 

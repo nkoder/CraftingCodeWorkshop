@@ -15,7 +15,7 @@ public class StatementPrinter {
     public void printStatementFor(Transactions transactions) {
         console.writeLine("DATE | AMOUNT | BALANCE");
         int totalAmount = 0;
-        for (Transaction transaction : transactions.asListOrderedChronologically()) {
+        for (Transaction transaction : transactions.orderedFromNewestToOldest()) {
             totalAmount += transaction.amount();
             console.writeLine(formatted(transaction, totalAmount));
         }
