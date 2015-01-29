@@ -23,6 +23,6 @@ public class Account {
     }
 
     public void printStatement() {
-        statementPrinter.printStatementOf(transactions);
+        statementPrinter.printStatementFor(transactions);
     }
 }

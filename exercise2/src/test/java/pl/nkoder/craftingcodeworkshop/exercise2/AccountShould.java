@@ -1,46 +1,51 @@
 package pl.nkoder.craftingcodeworkshop.exercise2;
 
-import org.joda.time.LocalDate;
 import org.junit.Test;
 import org.mockito.stubbing.OngoingStubbing;
+
+import java.time.LocalDate;
 
 import static org.mockito.Mockito.*;
 
 public class AccountShould {
 
-    private final Transactions transactions = mock(Transactions.class);
-    private final SystemClock systemClock = mock(SystemClock.class);
-    private final StatementPrinter statementPrinter = mock(StatementPrinter.class);
-    private final LocalDate someDate = new LocalDate(2014, 1, 1);
+    private static final LocalDate SOME_DATE = LocalDate.of(2014, 1, 1);
+
+    private Transactions transactions = mock(Transactions.class);
+    private SystemClock systemClock = mock(SystemClock.class);
+    private StatementPrinter statementPrinter = mock(StatementPrinter.class);
     private Account account;
 
     @Test
-    public void print_statement_of_transactions() {
+    public void
+    print_statement_for_transactions() {
         account = newAccountUsing(transactions, statementPrinter);
         
         account.printStatement();
 
-        verify(statementPrinter).printStatementOf(transactions);
+        verify(statementPrinter).printStatementFor(transactions);
     }
 
     @Test
-    public void store_deposit_in_transactions() {
-        currentDateIs(someDate);
+    public void
+    store_deposit_in_transactions() {
+        currentDateIs(SOME_DATE);
         account = newAccountUsing(transactions);
 
         account.deposit(100);
 
-        verify(transactions).storeTransaction(100, someDate);
+        verify(transactions).storeTransaction(100, SOME_DATE);
     }
 
     @Test
-    public void store_withdraw_in_transactions() {
-        currentDateIs(someDate);
+    public void
+    store_withdraw_in_transactions() {
+        currentDateIs(SOME_DATE);
         account = newAccountUsing(transactions);
 
         account.withdraw(100);
 
-        verify(transactions).storeTransaction(-100, someDate);
+        verify(transactions).storeTransaction(-100, SOME_DATE);
     }
 
     private OngoingStubbing<LocalDate> currentDateIs(LocalDate date) {
