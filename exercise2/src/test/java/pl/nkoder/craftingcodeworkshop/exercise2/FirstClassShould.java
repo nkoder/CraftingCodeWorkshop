@@ -1,4 +1,4 @@
-package pl.nkoder.craftingcodeworkshop.exercise1;
+package pl.nkoder.craftingcodeworkshop.exercise2;
 
 import org.junit.Test;
 
