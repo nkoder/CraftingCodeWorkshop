@@ -1,7 +1,5 @@
 package pl.nkoder.craftingcodeworkshop.exercise2;
 
-import java.util.Collections;
-
 public class Account {
 
     private Transactions transactions;
@@ -25,6 +23,6 @@ public class Account {
     }
 
     public void printStatement() {
-        statementPrinter.print(Collections.<StatementLine>emptyList());
+        statementPrinter.printStatementOf(transactions);
     }
 }
