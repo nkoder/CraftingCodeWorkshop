@@ -1,5 +1,7 @@
 package pl.nkoder.craftingcodeworkshop.sandbox;
 
+import java.util.StringJoiner;
+
 import static java.lang.String.format;
 
 public class WorkshopIntroduction {
@@ -13,7 +15,11 @@ public class WorkshopIntroduction {
     }
 
     public String asText() {
-        return format("There it is! '%s' facilitated by %s!", name, facilitator);
+        StringJoiner joiner = new StringJoiner(" ");
+        joiner.add("There it is!");
+        joiner.add("'%s'");
+        joiner.add("facilitated by %s!");
+        return format(joiner.toString(), name, facilitator);
     }
 
     public void methodThatShouldNotBeCalled() {
