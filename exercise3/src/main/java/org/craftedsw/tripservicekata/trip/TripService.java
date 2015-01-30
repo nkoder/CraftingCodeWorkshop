@@ -37,9 +37,13 @@ public class TripService {
 		return UserSession.getInstance();
 	}
 
+	private List<Trip> tripsOf(User user) {
+		return tripDAO().findTripsOf(user);
+	}
+
 	@VisibleForTesting
-	List<Trip> tripsOf(User user) {
-		return TripDAO.findTripsByUser(user);
+	TripDAO tripDAO() {
+		return new TripDAO();
 	}
 
 	private List<Trip> noTrips() {

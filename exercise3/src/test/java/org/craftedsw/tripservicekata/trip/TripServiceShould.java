@@ -18,15 +18,18 @@ public class TripServiceShould {
     public static final User MARTIN = new User();
     public static final Trip TRIP_TO_POZNAN = new Trip();
     public static final Trip TRIP_TO_WROCLAW = new Trip();
-
     private UserSession userSession;
+
     private TripService tripService;
+    private TripDAO tripDAO;
 
     @Before
     public void setUp() {
         userSession = mock(UserSession.class);
+        tripDAO = mock(TripDAO.class);
         tripService = spy(new TripService());
         doReturn(userSession).when(tripService).userSession();
+        doReturn(tripDAO).when(tripService).tripDAO();
     }
 
     @Test(expected = UserNotLoggedInException.class)
@@ -75,8 +78,8 @@ public class TripServiceShould {
         when(userSession.getLoggedUser()).thenReturn(user);
     }
 
-    private List<Trip> storedAreTripsOf(User user) {
-        return doReturn(user.trips()).when(tripService).tripsOf(user);
+    private void storedAreTripsOf(User user) {
+        when(tripDAO.findTripsOf(user)).thenReturn(user.trips());
     }
 
 }
