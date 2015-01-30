@@ -1,7 +1,10 @@
-package pl.nkoder.craftingcodeworkshop.exercise2;
+package pl.nkoder.craftingcodeworkshop.exercise2.statementprinter;
 
 import org.junit.Test;
 import org.mockito.InOrder;
+import pl.nkoder.craftingcodeworkshop.exercise2.system.Console;
+import pl.nkoder.craftingcodeworkshop.exercise2.transactions.Transaction;
+import pl.nkoder.craftingcodeworkshop.exercise2.transactions.Transactions;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

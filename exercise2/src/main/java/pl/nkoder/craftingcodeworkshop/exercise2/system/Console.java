@@ -1,4 +1,4 @@
-package pl.nkoder.craftingcodeworkshop.exercise2;
+package pl.nkoder.craftingcodeworkshop.exercise2.system;
 
 public class Console {
 

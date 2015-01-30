@@ -77,12 +77,6 @@
                 <version>17.0</version>
             </dependency>
             <dependency>
-                <groupId>pl.pragmatists</groupId>
-                <artifactId>JUnitParams</artifactId>
-                <version>1.0.4</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
                 <groupId>repository.org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
                 <version>3.3.2</version>
@@ -106,10 +100,6 @@
         <dependency>
             <groupId>repository.com.google.guava</groupId>
             <artifactId>guava</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>pl.pragmatists</groupId>
-            <artifactId>JUnitParams</artifactId>
         </dependency>
         <dependency>
             <groupId>repository.org.apache.commons</groupId>

@@ -1,5 +1,6 @@
-package pl.nkoder.craftingcodeworkshop.exercise2;
+package pl.nkoder.craftingcodeworkshop.exercise2.transactions;
 
+import com.google.common.annotations.VisibleForTesting;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
@@ -26,6 +27,7 @@ public class Transaction {
         return amount;
     }
 
+    @VisibleForTesting
     @Override
     public String toString() {
         return new ToStringBuilder(this, SHORT_PREFIX_STYLE)
@@ -34,6 +36,7 @@ public class Transaction {
                 .toString();
     }
 
+    @VisibleForTesting
     @Override
     public boolean equals(Object other) {
         if (this == other) {
@@ -49,6 +52,7 @@ public class Transaction {
                 .isEquals();
     }
 
+    @VisibleForTesting
     @Override
     public int hashCode() {
         return new HashCodeBuilder()

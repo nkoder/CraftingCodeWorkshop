@@ -1,4 +1,4 @@
-package pl.nkoder.craftingcodeworkshop.exercise2;
+package pl.nkoder.craftingcodeworkshop.exercise2.transactions;
 
 import org.junit.Test;
 
@@ -16,7 +16,8 @@ public class TransactionsShould {
     store_provide_empty_list_if_nothing_stored() {
         Transactions transactions = new Transactions();
 
-        assertThat(transactions.orderedFromNewestToOldest()).isEmpty();
+        assertThat(transactions.orderedFromNewestToOldest())
+                .isEmpty();
     }
 
     @Test

@@ -1,5 +1,9 @@
 package pl.nkoder.craftingcodeworkshop.exercise2;
 
+import pl.nkoder.craftingcodeworkshop.exercise2.statementprinter.StatementPrinter;
+import pl.nkoder.craftingcodeworkshop.exercise2.system.SystemClock;
+import pl.nkoder.craftingcodeworkshop.exercise2.transactions.Transactions;
+
 public class Account {
 
     private Transactions transactions;
@@ -13,16 +17,20 @@ public class Account {
     }
 
     public void deposit(int amount) {
-        transactions.storeTransaction(amount, systemClock.currentDate());
+        storeTransactionOf(amount);
 
     }
 
     public void withdraw(int amount) {
-        transactions.storeTransaction(-amount, systemClock.currentDate());
+        storeTransactionOf(-amount);
 
     }
 
     public void printStatement() {
         statementPrinter.printStatementFor(transactions);
+    }
+
+    private void storeTransactionOf(int amount) {
+        transactions.storeTransaction(amount, systemClock.currentDate());
     }
 }

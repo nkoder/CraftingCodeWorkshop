@@ -1,4 +1,4 @@
-package pl.nkoder.craftingcodeworkshop.exercise2;
+package pl.nkoder.craftingcodeworkshop.exercise2.transactions;
 
 import com.google.common.collect.Ordering;
 
