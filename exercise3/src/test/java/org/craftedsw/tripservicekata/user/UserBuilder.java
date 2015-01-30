@@ -6,7 +6,7 @@ import java.util.List;
 
 import static org.assertj.core.util.Lists.newArrayList;
 
-class UserBuilder {
+public class UserBuilder {
 
     private List<User> friends;
     private List<Trip> trips;

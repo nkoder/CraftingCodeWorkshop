@@ -9,13 +9,13 @@ import org.junit.Test;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.craftedsw.tripservicekata.trip.UserBuilder.user;
+import static org.craftedsw.tripservicekata.user.UserBuilder.user;
 import static org.mockito.Mockito.*;
 
 public class TripServiceShould {
 
     public static final User PAUL = new User();
-    public static final User OLA = new User();
+    public static final User MARTIN = new User();
     public static final Trip TRIP_TO_POZNAN = new Trip();
     public static final Trip TRIP_TO_WROCLAW = new Trip();
 
@@ -42,7 +42,7 @@ public class TripServiceShould {
     return_no_trips_of_user_if_it_is_not_a_friend_of_logged_in_user() {
         loggedInUserIs(PAUL);
         User stranger = user()
-                .whoIsFriendOf(OLA)
+                .whoIsFriendOf(MARTIN)
                 .andWhosTripsAre(TRIP_TO_POZNAN);
         storedAreTripsOf(stranger);
 
@@ -56,7 +56,7 @@ public class TripServiceShould {
     return_trips_of_user_who_is_friend_of_logged_in_user() {
         loggedInUserIs(PAUL);
         User friend = user()
-                .whoIsFriendOf(OLA, PAUL)
+                .whoIsFriendOf(MARTIN, PAUL)
                 .andWhosTripsAre(TRIP_TO_POZNAN, TRIP_TO_WROCLAW);
         storedAreTripsOf(friend);
 
