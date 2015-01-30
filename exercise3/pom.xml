@@ -1,20 +1,21 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.craftedsw</groupId>
-	<artifactId>trip-service-kata</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>trip-service-kata</name>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.craftedsw</groupId>
+    <artifactId>trip-service-kata</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>trip-service-kata</name>
 
-   <properties>
+    <properties>
+        <java.version>1.8</java.version>
         <hamcrest.version>1.1</hamcrest.version>
         <junit.version>4.8.2</junit.version>
-       <mockito.version>1.9.5</mockito.version>
+        <mockito.version>1.9.5</mockito.version>
         <spring.version>3.1.1.RELEASE</spring.version>
-       <assertj.version>1.7.0</assertj.version>
-       <catch-exception.version>1.2.0</catch-exception.version>
-       <guava.version>17.0</guava.version>
-   </properties>
+        <assertj.version>1.7.0</assertj.version>
+        <catch-exception.version>1.2.0</catch-exception.version>
+        <guava.version>17.0</guava.version>
+    </properties>
 
     <dependencies>
         <dependency>
@@ -46,7 +47,7 @@
             <artifactId>catch-exception</artifactId>
             <version>${catch-exception.version}</version>
         </dependency>
-        
+
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-beans</artifactId>
