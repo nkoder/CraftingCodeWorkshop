@@ -9,9 +9,12 @@
    <properties>
         <hamcrest.version>1.1</hamcrest.version>
         <junit.version>4.8.2</junit.version>
-        <mockito.version>1.8.5</mockito.version>
+       <mockito.version>1.9.5</mockito.version>
         <spring.version>3.1.1.RELEASE</spring.version>
-    </properties>
+       <assertj.version>1.7.0</assertj.version>
+       <catch-exception.version>1.2.0</catch-exception.version>
+       <guava.version>17.0</guava.version>
+   </properties>
 
     <dependencies>
         <dependency>
@@ -28,20 +31,20 @@
         </dependency>
         <dependency>
             <groupId>org.mockito</groupId>
-            <artifactId>mockito-all</artifactId>
+            <artifactId>mockito-core</artifactId>
             <version>${mockito.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>repository.org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
-            <version>1.7.0</version>
+            <version>${assertj.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>repository.com.googlecode.catch-exception</groupId>
             <artifactId>catch-exception</artifactId>
-            <version>1.2.0</version>
+            <version>${catch-exception.version}</version>
         </dependency>
         
         <dependency>
@@ -53,6 +56,11 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
             <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>repository.com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
         </dependency>
     </dependencies>
 
