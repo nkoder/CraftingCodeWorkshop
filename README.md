@@ -1,6 +1,6 @@
 # CraftingCodeWorkshop
 
-Category: **participation in workshop**
+Category: **participation in a workshop**
 
 Tags: **software craftmanship**, **TDD**, **mocks**
 
